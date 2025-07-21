@@ -1,0 +1,10 @@
+{
+  "casa": {
+    "cocina": {
+      "humedad": 312,
+      "luz": 1,
+      "puerta": 1,
+      "temp": 45
+    }
+  }
+}
