@@ -37,11 +37,22 @@ const mandardatos = async (nombre,stock,precio) => {
       }
 
     }
+    
+    const eliminardato = async (id) => {
+      try {
+        await deleteDoc(doc(db, 'productos', id));
+        obtenerdatos()
+
+      } catch (error) {
+        console.log(error)
+      }
+
+    }
 
 
 
   return (
-    <estadoGlobalProductos.Provider value={{ dataproductos, mandardatos, obtenerdatos }}>
+    <estadoGlobalProductos.Provider value={{ dataproductos, mandardatos, obtenerdatos, eliminardato }}>
       {children}
     </estadoGlobalProductos.Provider>
   );
